@@ -516,7 +516,6 @@ func (s *Subtitles) Trim(from, to time.Duration) {
 	// from end to start
 	j := len(s.Items) - 1
 	for j >= 0 {
-		fmt.Println(s.Items, j)
 		item := s.Items[j]
 		if item.EndAt > to {
 			s.removeItem(j)
